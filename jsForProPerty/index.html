@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>Open file</title>
+    <style>
+        p strong {
+            color: red;
+        }
+    </style>
+    <script src="./js/base/jquery.min.js"></script>
+    <script src="./js/getDataHtml.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <input type="file" onchange="getDataHtmlClick(this,'#msg')" />
+
+    </div>
+    <hr>
+    <div id="msg"></div>
+</body>
+
+</html>

@@ -1,0 +1,931 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Land Register</title>
+    <style type="text/css">
+        <!--
+        .EngArial4 {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 15pt;
+            font-style: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-variant: normal;
+            color: #0066db;
+        }
+
+        .FieldName {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 10pt;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+
+        .ReadOnly {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+
+        .InputText {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+
+        .TableHead {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            color: #000000;
+        }
+
+        .ReportHeader {
+            font-familly: "Courier New", Courier, monospace;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .ReportFooter {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .PartHeader {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .FieldHeader {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: nromal;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+            text-align: center;
+            vertical-align: bottom;
+            border-bottom: 1px solid black;
+        }
+
+        Table.ReferencedLot {
+            table-layout: fixed;
+            width: 300;
+            border-spacing: 0px;
+        }
+
+        td {
+            text-align: left;
+            vertical-align: top;
+        }
+
+        Table {
+            table-layout: fixed;
+            width: 950;
+            border-collapse: separate;
+            border-spacing: 0px;
+            padding: 0 0 0 0;
+        }
+
+        td.lotDocLabel {
+            text-align: right;
+        }
+
+        td.addressChnLabel {
+            text-align: right;
+        }
+
+        td.date {
+            text-align: center;
+        }
+
+        td.consideration {
+            text-align: center;
+        }
+
+        td.memorialNo {
+            text-align: center;
+        }
+
+        td.docRemarksLabel {
+            text-align: right;
+        }
+
+        td.emptyNature {
+            text-align: center;
+        }
+
+        td.registrationSts {
+            text-align: center;
+        }
+
+        td.nil {
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .q A:visited {
+            COLOR: #00c;
+        }
+
+        .q A:link {
+            COLOR: #00c;
+        }
+
+        .q A:active {
+            COLOR: #00c;
+        }
+
+        .q {
+            COLOR: #00c;
+        }
+
+        * {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-variant: normal;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+        -->
+    </style>
+</head>
+<body bgcolor="#ffffff">
+    <a href="#property" class="q">View PROPERTY PARTICULARS</a>
+    <br>
+    <a href="#owner" class="q">View OWNER PARTICULARS</a>
+    <br>
+    <a href="#incumbrances" class="q">View INCUMBRANCES</a>
+    <br>
+    <a href="#deeds" class="q">View DEEDS PENDING REGISTRATION</a>
+    <br>
+    <br>
+    <table cellspacing="0">
+        <tr>
+            <td class="ReportHeader">
+                土 地 註 冊 處 THE LAND REGISTRY<br>
+                土 地 登 記 冊 LAND REGISTER
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="TableText">
+                印製於 PRINTED AT: INTERNET SEARCH (DOWNLOAD)<br>
+                查冊日期及時間 SEARCH DATE AND TIME: 11/06/2015 15:32<br>
+                查冊者姓名 NAME OF SEARCHER: ecm<br>
+                查冊種類 SEARCH TYPE: CURRENT
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="TableText">
+                本登記冊列明有關物業截至 11/06/2015&nbsp;07:30 之資料<br>
+                THE INFORMATION SET OUT BELOW CONTAINS PARTICULARS OF THE PROPERTY UP TO 07:30 ON 11/06/2015.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="TableText">
+                備存土地紀錄以供市民查閱旨在防止秘密及有欺詐成分的物業轉易，以及提供容易追溯和確定土地財產及不動產業權的方法。土地紀錄內載的資料不得用於與土地紀錄的宗旨無關之目的，使用所提供的資料須符合&laquo;個人資料（私隱）條例&raquo;的規定。<br>
+                The land records are kept and made available to members of the public to prevent secret and fraudulent conveyances, and to provide means whereby the titles to real and immovable property may be easily traced and ascertained. The information contained in the land records shall not be used for purposes that are not related to the purposes of the land records. The use of information provided is subject to the provisions in the Personal Data (Privacy) Ordinance.<br>
+            </td>
+        </tr>
+    </table>
+    <a name="property"></a>
+    <table cellspacing="0">
+        <tr>
+            <td width="9%"></td>
+            <td width="13%"></td>
+            <td width="28%"></td>
+            <td width="8%"></td>
+            <td width="9%"></td>
+            <td width="4%"></td>
+            <td width="8%"></td>
+            <td width="21%"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="PartHeader">
+                物業資料<br>
+                <u><b>PROPERTY PARTICULARS</b></u>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                物業參考編號<br>
+                PROPERTY REFERENCE NUMBER (PRN): A2495459-2
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">地段編號</td>
+        </tr>
+        <tr>
+            <td rowspan="4">LOT NO.: </td>
+            <td rowspan="4" colspan="2">INLAND LOT NO. 8196</td>
+            <td class="lotDocLabel" colspan="2">批約 HELD UNDER:</td>
+            <td colspan="3">CONDITIONS OF SALE NO. 9446 </td>
+        </tr>
+        <tr>
+            <td class="lotDocLabel" colspan="2">年期 LEASE TERM:</td>
+            <td colspan="3">75 YEARS RENEWABLE FOR 75 YEARS</td>
+        </tr>
+        <tr>
+            <td class="lotDocLabel" colspan="4">開始日期 COMMENCEMENT OF LEASE TERM:</td>
+            <td>05/02/1969</td>
+        </tr>
+        <tr>
+            <td class="lotDocLabel" colspan="3">每年地稅 RENT PER ANNUM:</td>
+            <td colspan="2">$782.00</td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                所佔地段份數<br>
+                SHARE OF THE LOT: 1569/65601
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>ADDRESS: </td>
+            <td colspan="2">
+                FLAT B ON 8/F<br>&amp; PARKING SPACES NOS.69 &amp; 70<br>VICTORIA HEIGHTS<br>43A STUBBS ROAD HONG KONG<br>
+            </td>
+            <td class="addressChnLabel">地址: </td>
+            <td colspan="4">
+                中文地址不詳<br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">備註</td>
+        </tr>
+        <tr>
+            <td>REMARKS: </td>
+            <td colspan="7"> - </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <br>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+    <a name="owner"></a>
+    <table cellspacing="5">
+        <tr>
+            <td width="20%"></td>
+            <td width="18%"></td>
+            <td width="16%"></td>
+            <td width="12%"></td>
+            <td width="12%"></td>
+            <td width="22%"></td>
+        </tr>
+        <tr>
+            <td colspan="6" class="PartHeader">
+                業主資料<br>
+                <u><b>OWNER PARTICULARS</b></u>
+            </td>
+        </tr>
+        <tr>
+            <td class="FieldHeader">業主姓名<br>NAME OF OWNER</td>
+            <td class="FieldHeader">身分<br>(如非唯一擁有人)<br>CAPACITY<br>(IF NOT SOLE OWNER)</td>
+            <td class="FieldHeader">註冊摘要編號<br>MEMORIAL NO.</td>
+            <td class="FieldHeader">文書日期<br>DATE OF INSTRUMENT</td>
+            <td class="FieldHeader">註冊日期<br>DATE OF REGISTRATION</td>
+            <td class="FieldHeader">代價<br>CONSIDERATION</td>
+        </tr>
+        <tr>
+            <td>
+                LEE FAI LUNG COMPANY LIMITED<br>-<br>
+            </td>
+            <td></td>
+            <td>
+                UB1884477<br>
+            </td>
+            <td class="date">24/04/1980</td>
+            <td class="date">03/06/1980</td>
+            <td class="consideration">$1,543,879.00</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            ASSIGNMENT WITH PLANS<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+    <a name="incumbrances"></a>
+    <table cellspacing="5">
+        <tr>
+            <td width="15%"></td>
+            <td width="12%"></td>
+            <td width="12%"></td>
+            <td width="20%"></td>
+            <td width="21%"></td>
+            <td width="20%"></td>
+        </tr>
+        <tr>
+            <td colspan="6" class="PartHeader">
+                物業涉及的轇轕<br>
+                <u><b>INCUMBRANCES</b></u>
+            </td>
+        </tr>
+        <tr>
+            <td class="FieldHeader">註冊摘要編號<br>MEMORIAL NO.</td>
+            <td class="FieldHeader">文書日期<br>DATE OF INSTRUMENT</td>
+            <td class="FieldHeader">註冊日期<br>DATE OF REGISTRATION</td>
+            <td class="FieldHeader">文書性質<br>NATURE</td>
+            <td class="FieldHeader">受惠各方<br>IN FAVOUR OF</td>
+            <td class="FieldHeader">代價<br>CONSIDERATION</td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1413048</td>
+            <td class="date">05/08/1977</td>
+            <td class="date">19/08/1977</td>
+            <td>AGREEMENT FOR SALE AND PURCHASE</td>
+            <td>
+                HOLYWELL COMPANY LIMITED<br>-<br>
+            </td>
+            <td class="consideration">$22,459,800.00 (PT.)</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1480716</td>
+            <td class="date">14/01/1978</td>
+            <td class="date">03/02/1978</td>
+            <td>RESUMPTION OF LAND FOR ABERDEEN TUNNEL</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            UNDER CROWN LANDS RESUMPTION ORDIN- ANCE RE UNDERGROUND PORTION WITH PLAN REVERTED TO CROWN ON 21-4-1978<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1559590</td>
+            <td class="date">29/06/1978</td>
+            <td class="date">09/08/1978</td>
+            <td>MODIFICATION LETTER</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1591404</td>
+            <td class="date">23/09/1978</td>
+            <td class="date">11/10/1978</td>
+            <td>UNDERTAKING</td>
+            <td>
+                THE REGISTRAR GENERAL<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            BY PACIFIC ISLANDS SHIPBUILDING COMPANY LIMITED AND HOLYWELL COMPANY LIMITED<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1602448</td>
+            <td class="date">16/10/1978</td>
+            <td class="date">31/10/1978</td>
+            <td>MEMORANDUM WITH ARCHITECT'S CERTIFIED COPY</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            OF THE LAYOUT PLANS FOR CAR PARKING SPACES<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1648282</td>
+            <td class="date">29/12/1978</td>
+            <td class="date">24/01/1979</td>
+            <td>AGREEMENT FOR SALE AND PURCHASE WITH PLAN</td>
+            <td>
+                LEE FAI LUNG COMPANY LIMITED<br>-<br>
+            </td>
+            <td class="consideration">$1,543,879.00</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            BY HOLYWELL COMPANY LIMITED SEE ASSIGNMENT MEM.NO.1884477<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1718833</td>
+            <td class="date">21/06/1979</td>
+            <td class="date">21/06/1979</td>
+            <td>AGREEMENT AS TO COMPENSATION AND INDEMNITY</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            IN RESPECT OF FORMER REGISTERED INTEREST RE UNDERGROUND PORTION<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1865709</td>
+            <td class="date">07/05/1979</td>
+            <td class="date">30/04/1980</td>
+            <td>THE AMENDED ARCHITECT'S CERTIFIED COPY</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            OF THE LAYOUT PLANS FOR CAR PARKING SPACES<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1865710</td>
+            <td class="date">28/01/1980</td>
+            <td class="date">30/04/1980</td>
+            <td>OCCUPATION PERMIT (NO.H21/80)</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1880490</td>
+            <td class="date">19/03/1980</td>
+            <td class="date">27/05/1980</td>
+            <td>MANAGEMENT AGREEMENT</td>
+            <td>
+                HOPEWELL SERVICES AND AGENCY LIMITED "THE MANAGER"<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1880492</td>
+            <td class="date">24/04/1980</td>
+            <td class="date">27/05/1980</td>
+            <td>DEED OF COVENANT WITH PLANS</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB7572187</td>
+            <td class="date">29/07/1998</td>
+            <td class="date">21/09/1998</td>
+            <td>ORDER NO.DH163/HK/98/C UNDER SEC. 27A OF THE BUILDINGS ORDINANCE</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            BY THE BUILDING AUTHORITY WITH PLAN RE NATURAL, FORMED OR MAN-MADE LAND<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB8032576</td>
+            <td class="date">01/03/2000</td>
+            <td class="date">24/03/2000</td>
+            <td>ORDER NO.DH27/HK/00/C UNDER SEC. 27A OF THE BUILDINGS ORDINANCE</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            BY THE BUILDING AUTHORITY WITH PLAN RE: THE NATURAL, FORMED OR MAN-MADE LAND)<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB9436190</td>
+            <td class="date">02/12/2004</td>
+            <td class="date">05/01/2005</td>
+            <td>LETTER OF COMPLIANCE</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">05121200010214</td>
+            <td class="date">05/11/2005</td>
+            <td class="date">12/12/2005</td>
+            <td>LETTER OF COMPLIANCE</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB8346573</td>
+            <td class="date">03/02/2001</td>
+            <td class="date">26/03/2001</td>
+            <td>COMPLETION LETTER RELATING TO ORDER NO.DH184/HK/98/C UNDER SECTION 27A</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            OF THE BUILDINGS ORDINANCE BY THE BUILDING AUTHORITY<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB9407175</td>
+            <td class="date">26/10/2004</td>
+            <td class="date">07/12/2004</td>
+            <td>PERMISSION LETTER FOR CARRYING OUT SLOPE STABILIZATION WORKS *</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            * ON GOVERNMENT LAND WITH PLAN FROM DIRECTOR OF LANDS<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+    <a name="deeds"></a>
+    <table cellspacing="5">
+        <tr>
+            <td width="15%"></td>
+            <td width="11%"></td>
+            <td width="11%"></td>
+            <td width="20%"></td>
+            <td width="23%"></td>
+            <td width="20%"></td>
+        </tr>
+        <tr>
+            <td colspan="6" class="PartHeader">
+                等待註冊的契約<br>
+                <u><b>DEEDS PENDING REGISTRATION</b></u>
+            </td>
+        </tr>
+        <tr>
+            <td class="FieldHeader">註冊摘要編號<br>MEMORIAL NO.</td>
+            <td class="FieldHeader">文書日期<br>DATE OF INSTRUMENT</td>
+            <td class="FieldHeader">交付日期<br>DATE OF DELIVERY</td>
+            <td class="FieldHeader">文書性質<br>NATURE</td>
+            <td class="FieldHeader">受惠各方<br>IN FAVOUR OF</td>
+            <td class="FieldHeader">代價<br>CONSIDERATION</td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1413048</td>
+            <td class="date">05/08/1977</td>
+            <td class="date">19/08/1977</td>
+            <td>AGREEMENT FOR SALE AND PURCHASE110</td>
+            <td>
+                HOLYWELL COMPANY LIMITED110<br>-<br>
+            </td>
+            <td class="consideration">$22,459,800.00 (PT.)</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1480716</td>
+            <td class="date">14/01/1978</td>
+            <td class="date">03/02/1978</td>
+            <td>RESUMPTION OF LAND FOR ABERDEEN TUNNEL110</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            UNDER CROWN LANDS RESUMPTION ORDIN- ANCE RE UNDERGROUND PORTION WITH PLAN REVERTED TO CROWN ON 21-4-1978<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1559590</td>
+            <td class="date">29/06/1978</td>
+            <td class="date">09/08/1978</td>
+            <td>MODIFICATION LETTER110</td>
+            <td>
+                -<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td class="memorialNo">UB1591404</td>
+            <td class="date">23/09/1978</td>
+            <td class="date">11/10/1978</td>
+            <td>UNDERTAKING110</td>
+            <td>
+                THE REGISTRAR GENERAL110<br>-<br>
+            </td>
+            <td class="consideration">-</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <table>
+                    <tr>
+                        <td width="45%" class="docRemarksLabel">備註 REMARKS:</td>
+                        <td width="54%" align="left">
+                            BY PACIFIC ISLANDS SHIPBUILDING COMPANY LIMITED AND HOLYWELL COMPANY LIMITED<br>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" class="ReportFooter">
+                *************************************** 登記冊末端 END OF REGISTER ***************************************
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
